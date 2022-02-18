@@ -12,7 +12,7 @@ If you aren't in the workshop container environment, grab coreutils and some bui
 ```shell
 	# not required in the workshop environment
 	$ git submodule init && git submodule update
-	$ sudo apt install autopoint bison gperf autoconf
+	$ sudo apt install autopoint bison gperf autoconf texinfo
 ```
 
 Building this old version of coreutils is quite fragile - take care to follow these instructions precisely!
