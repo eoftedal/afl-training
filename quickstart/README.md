@@ -23,19 +23,19 @@ the Dockerfile for a comprehensive list of dependencies for all of the challenge
 
 Work around some Ubuntu annoyances
 
-    $ sudo update-alternatives --install /usr/bin/clang clang `which clang-11.0` 1
-    $ sudo update-alternatives --install /usr/bin/clang++ clang++ `which clang++-11.0` 1
-    $ sudo update-alternatives --install /usr/bin/llvm-config llvm-config `which llvm-config-11.0` 1
-    $ sudo update-alternatives --install /usr/bin/llvm-symbolizer llvm-symbolizer `which llvm-symbolizer-11.0` 1
+    sudo update-alternatives --install /usr/bin/clang clang `which clang-11` 1
+    sudo update-alternatives --install /usr/bin/clang++ clang++ `which clang++-11` 1
+    sudo update-alternatives --install /usr/bin/llvm-config llvm-config `which llvm-config-11` 1
+    sudo update-alternatives --install /usr/bin/llvm-symbolizer llvm-symbolizer `which llvm-symbolizer-11` 1
 
 Get, build, and install afl:
 
 ```shell
-    $ git clone https://github.com/AFLplusplus/AFLplusplus
-    $ cd AFLplusplus
-    $ git checkout 2.68c # if you want a specific version, otherwise skip this step
-    $ make distrib
-    $ sudo make install
+    git clone https://github.com/AFLplusplus/AFLplusplus
+    cd AFLplusplus
+    git checkout 2.68c # if you want a specific version, otherwise skip this step
+    make distrib
+    sudo make install
 ```
 
 Make system not interfere with crash detection, plus some other tweaks:
